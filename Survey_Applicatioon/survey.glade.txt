@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.0"/>
+  <object class="GtkWindow" id="window">
+    <property name="title">Survey Questionnaire</property>
+    <child>
+      <object class="GtkStack">
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+            <child>
+              <object class="GtkLabel" id="name_label">
+                <property name="label">Name:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="name_entry"/>
+            </child>
+            <child>
+              <object class="GtkLabel" id="course_label">
+                <property name="label">Course:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="course_entry"/>
+            </child>
+            <child>
+              <object class="GtkLabel" id="section_label">
+                <property name="label">Section:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="section_entry"/>
+            </child>
+            <child>
+              <object class="GtkLabel" id="year_label">
+                <property name="label">Year:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="year_entry"/>
+            </child>
+            <child>
+              <object class="GtkButton" id="next_button">
+                <property name="label">Next</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+            <child>
+              <object class="GtkLabel" id="question_label1">
+                <property name="label">Question 1:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="agree_radio1">
+                <property name="label">Agree</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="disagree_radio1">
+                <property name="group">agree_radio1</property>
+                <property name="label">Disagree</property>
+              </object>
+            </child>
+            <!-- Repeat the above child elements for question 2 to 5 -->
+            <child>
+              <object class="GtkButton" id="submit_button">
+                <property name="label">Submit</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
